@@ -1,4 +1,4 @@
-# offline_database
+# offline_database using sqflite
 
 A new Flutter project.
 
