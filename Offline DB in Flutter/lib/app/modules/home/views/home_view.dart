@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
-
 import '../../../routes/app_pages.dart';
 import '../controllers/home_controller.dart';
+import 'package:offline_database/app/res/colors.dart';
 
 class HomeView extends GetView<HomeController> {
   const HomeView({Key? key}) : super(key: key);
@@ -32,7 +31,7 @@ class HomeView extends GetView<HomeController> {
 
           if (userDetails.isEmpty) {
             return const Center(
-                child: Text("Empty !", style: TextStyle(fontSize: 30, color: Colors.blueGrey),)
+                child: Text("Empty !", style: TextStyle(fontSize: 30, color: MyColors.blueGreyColor),)
             );
           } else {
             return ListView.separated(
@@ -43,7 +42,7 @@ class HomeView extends GetView<HomeController> {
                   key: Key(userDetail.id.toString()),
                   direction: DismissDirection.endToStart,
                   background: Container(
-                    color: Colors.red,
+                    color: MyColors.redColor,
                     alignment: Alignment.centerRight,
                     child: const Padding(
                       padding: EdgeInsets.all(8.0),

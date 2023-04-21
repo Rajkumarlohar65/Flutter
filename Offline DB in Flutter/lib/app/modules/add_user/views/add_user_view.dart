@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:offline_database/app/res/colors.dart';
 
 import '../controllers/add_user_controller.dart';
 
@@ -25,7 +26,7 @@ class AddUserView extends GetView<AddUserController> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
 
-                const Text("Enter User Data", style: TextStyle(fontSize: 30, color: Colors.blueGrey),),
+                const Text("Enter User Data", style: TextStyle(fontSize: 30, color: MyColors.blueGreyColor),),
 
                 const SizedBox(height: 30,),
 

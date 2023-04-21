@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:offline_database/app/data/database_helper.dart';
-import 'package:offline_database/app/modules/home/controllers/home_controller.dart';
 import '../../../data/models/user_details_model.dart';
+import '../../../res/utils.dart';
 
 class AddUserController extends GetxController {
   String? id;
@@ -35,10 +35,10 @@ class AddUserController extends GetxController {
       );
 
       await DatabaseHelper.instance.insert(userDetailsData);
-      Get.snackbar("Inserted", "Data is inserted", snackPosition: SnackPosition.BOTTOM, duration: const Duration(seconds: 1),);
+      Utils().showToast("Inserted");
 
     } catch (e){
-      Get.snackbar("Error", "Data is not stored", snackPosition: SnackPosition.BOTTOM, duration: const Duration(seconds: 1),);
+      Utils().showSnackBar("Error", "Data is not stored");
     }
   }
 
