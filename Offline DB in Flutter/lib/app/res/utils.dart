@@ -9,13 +9,13 @@ class Utils{
     Get.snackbar(
         title,
         message,
-        backgroundColor: MyColors.redColor,
+        backgroundColor: AppColors.redColor,
         duration: const Duration(seconds: 5),
         dismissDirection: DismissDirection.horizontal,
     );
   }
 
   void showToast(String message){
-    Fluttertoast.showToast(msg: message, backgroundColor: MyColors.greenColor);
+    Fluttertoast.showToast(msg: message, backgroundColor: AppColors.greenColor);
   }
 }

@@ -26,7 +26,7 @@ class AddUserView extends GetView<AddUserController> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
 
-                const Text("Enter User Data", style: TextStyle(fontSize: 30, color: MyColors.blueGreyColor),),
+                const Text("Enter User Data", style: TextStyle(fontSize: 30),),
 
                 const SizedBox(height: 30,),
 

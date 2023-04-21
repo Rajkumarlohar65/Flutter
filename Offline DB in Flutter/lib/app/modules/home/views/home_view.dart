@@ -31,7 +31,7 @@ class HomeView extends GetView<HomeController> {
 
           if (userDetails.isEmpty) {
             return const Center(
-                child: Text("Empty !", style: TextStyle(fontSize: 30, color: MyColors.blueGreyColor),)
+                child: Text("Empty !", style: TextStyle(fontSize: 30),)
             );
           } else {
             return ListView.separated(
@@ -42,7 +42,7 @@ class HomeView extends GetView<HomeController> {
                   key: Key(userDetail.id.toString()),
                   direction: DismissDirection.endToStart,
                   background: Container(
-                    color: MyColors.redColor,
+                    color: AppColors.redColor,
                     alignment: Alignment.centerRight,
                     child: const Padding(
                       padding: EdgeInsets.all(8.0),
