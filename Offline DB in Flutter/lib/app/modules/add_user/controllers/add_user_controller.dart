@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:offline_database/app/data/database_helper.dart';
+import 'package:offline_database/app/res/colors.dart';
 import '../../../data/models/user_details_model.dart';
 import '../../../res/utils.dart';
 
@@ -35,10 +36,10 @@ class AddUserController extends GetxController {
       );
 
       await DatabaseHelper.instance.insert(userDetailsData);
-      Utils().showToast("Inserted");
+      Utils().showToast("Inserted", backgroundColor: AppColors.greenColor);
 
     } catch (e){
-      Utils().showSnackBar("Error", "Data is not stored");
+      Utils().showSnackBar("Error", "Data is not Stored", backgroundColor: AppColors.redColor);
     }
   }
 
