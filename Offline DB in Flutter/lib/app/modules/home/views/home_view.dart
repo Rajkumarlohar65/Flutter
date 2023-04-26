@@ -71,7 +71,7 @@ class HomeView extends GetView<HomeController> {
                               userDetails.removeAt(index);
                               Get.back();
                             },
-                            child: const Text(HomePageStrings.alertCancel),
+                            child: const Text(HomePageStrings.alertDelete),
                           ),
                         ],
                       ));
