@@ -1,6 +1,6 @@
 import 'package:flutter/animation.dart';
 import 'package:get/get.dart';
-import 'package:offline_database/app/services/database_helper.dart';
+import 'package:offline_database/app/data/services/database_helper.dart';
 
 import '../../../data/models/user_details_model.dart';
 

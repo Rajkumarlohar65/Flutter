@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:offline_database/app/services/database_helper.dart';
+import 'package:offline_database/app/data/services/database_helper.dart';
 import 'package:offline_database/app/res/colors.dart';
 import 'package:offline_database/app/res/string.dart';
 import '../../../data/models/user_details_model.dart';
