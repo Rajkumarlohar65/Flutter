@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../../res/string.dart';
 import '../../../routes/app_pages.dart';
 import '../controllers/home_controller.dart';
 import 'package:offline_database/app/res/colors.dart';
@@ -12,7 +13,7 @@ class HomeView extends GetView<HomeController> {
       return Scaffold(
         appBar: AppBar(
           title: Obx(() {
-            return Text(controller.isAnimating.value ? "Refreshing..." : 'Users');
+            return Text(controller.isAnimating.value ? HomePageStrings.refreshingMessage : HomePageStrings.appBarTitle);
           }),
           centerTitle: true,
           actions: [
@@ -31,7 +32,7 @@ class HomeView extends GetView<HomeController> {
 
           if (userDetails.isEmpty) {
             return const Center(
-                child: Text("Empty !", style: TextStyle(fontSize: 30),)
+                child: Text(HomePageStrings.emptyMessage, style: TextStyle(fontSize: 30),)
             );
           } else {
             return ListView.separated(
@@ -55,13 +56,13 @@ class HomeView extends GetView<HomeController> {
                   child: ListTile(
                     onLongPress: () {
                       Get.dialog(AlertDialog(
-                        title: const Text('Delete User'),
+                        title: const Text(HomePageStrings.alertDeleteTitle),
                         content: const Text(
-                            'Are you sure you want to delete this user?'),
+                            HomePageStrings.alertDeleteContent),
                         actions: [
                           TextButton(
                             onPressed: () => Get.back(),
-                            child: const Text('Cancel'),
+                            child: const Text(HomePageStrings.alertCancel),
                           ),
                           TextButton(
                             onPressed: () {
@@ -70,16 +71,16 @@ class HomeView extends GetView<HomeController> {
                               userDetails.removeAt(index);
                               Get.back();
                             },
-                            child: const Text('Delete'),
+                            child: const Text(HomePageStrings.alertCancel),
                           ),
                         ],
                       ));
                     },
                     leading: Text('${index + 1}'),
                     title: Text(
-                        '${userDetail.name!}  (id: ${userDetail.id.toString()})'),
+                        '${userDetail.name!}  (${HomePageStrings.textBeforeId} ${userDetail.id.toString()})'),
                     subtitle: Text(userDetail.email!),
-                    trailing: Text('Age: ${userDetail.age.toString()}'),
+                    trailing: Text('${HomePageStrings.textBeforeAge} ${userDetail.age.toString()}'),
                   ),
                 );
               },

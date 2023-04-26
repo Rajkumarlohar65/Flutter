@@ -8,11 +8,11 @@ environment:
 dependencies: 
   cupertino_icons: ^1.0.2
   get: 4.6.5
-  sqflite: 2.2.6
-  path_provider: 2.0.14
+  fluttertoast: ^8.2.1
+  sqflite: 2.2.7
+  path: 1.8.2
   flutter: 
     sdk: flutter
-  fluttertoast: ^8.2.1
 
 dev_dependencies: 
   flutter_lints: 2.0.1

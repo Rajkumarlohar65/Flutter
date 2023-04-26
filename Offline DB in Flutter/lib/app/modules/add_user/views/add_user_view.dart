@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:offline_database/app/res/colors.dart';
+import 'package:offline_database/app/res/string.dart';
 
 import '../controllers/add_user_controller.dart';
 
@@ -13,7 +13,7 @@ class AddUserView extends GetView<AddUserController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Creating User'),
+        title: const Text(AddUserPageString.appBarTitle),
         centerTitle: true,
       ),
       body: Form(
@@ -26,19 +26,19 @@ class AddUserView extends GetView<AddUserController> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
 
-                const Text("Enter User Data", style: TextStyle(fontSize: 30),),
+                const Text(AddUserPageString.screenTitle, style: TextStyle(fontSize: 30),),
 
                 const SizedBox(height: 30,),
 
                 TextFormField(
                   controller: controller.idController,
                   decoration: const InputDecoration(
-                      label: Text("id"),
+                      label: Text(AddUserPageString.idHint),
                       border: OutlineInputBorder()
                   ),
                   validator: (value) {
                     if(value == null || value.isEmpty){
-                      return 'please enter id';
+                      return AddUserPageString.alertIdNotNull;
                     }
                   },
                   onSaved: (value) {
@@ -51,12 +51,12 @@ class AddUserView extends GetView<AddUserController> {
                 TextFormField(
                   controller: controller.nameController,
                   decoration: const InputDecoration(
-                      label: Text("Name"),
+                      label: Text(AddUserPageString.nameHint),
                       border: OutlineInputBorder()
                   ),
                   validator: (value) {
                     if(value == null || value.isEmpty){
-                      return 'please enter name';
+                      return AddUserPageString.alertNameNotNull;
                     }
                   },
                   onSaved: (value) {
@@ -69,12 +69,12 @@ class AddUserView extends GetView<AddUserController> {
                 TextFormField(
                   controller: controller.emailController,
                   decoration: const InputDecoration(
-                      label: Text("Email"),
+                      label: Text(AddUserPageString.emailHint),
                       border: OutlineInputBorder()
                   ),
                   validator: (value) {
                     if(value == null || value.isEmpty){
-                      return 'please enter email';
+                      return AddUserPageString.alertEmailNotNull;
                     }
                   },
                   onSaved: (value) {
@@ -87,12 +87,12 @@ class AddUserView extends GetView<AddUserController> {
                 TextFormField(
                   controller: controller.ageController,
                   decoration: const InputDecoration(
-                      label: Text("Age"),
+                      label: Text(AddUserPageString.ageHint),
                       border: OutlineInputBorder()
                   ),
                   validator: (value) {
                     if(value == null || value.isEmpty){
-                      return 'please enter age';
+                      return AddUserPageString.alertAgeNotNull;
                     }
                   },
                   onSaved: (value) {
@@ -107,7 +107,7 @@ class AddUserView extends GetView<AddUserController> {
                     _formKey.currentState!.save();
                     controller.insertUserDetails();
                   }
-                }, child: const Text("Submit"))
+                }, child: const Text(AddUserPageString.submitButtonText))
 
               ],
             ),
