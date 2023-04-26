@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../res/string.dart';
+import '../../../core/values/app_string.dart';
 import '../../../routes/app_pages.dart';
 import '../controllers/home_controller.dart';
-import 'package:offline_database/app/res/colors.dart';
+import 'package:offline_database/app/core/values/app_color.dart';
 
 class HomeView extends GetView<HomeController> {
   const HomeView({Key? key}) : super(key: key);

@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:offline_database/app/data/services/database_helper.dart';
-import 'package:offline_database/app/res/colors.dart';
-import 'package:offline_database/app/res/string.dart';
+import 'package:offline_database/app/core/values/app_color.dart';
+import 'package:offline_database/app/core/values/app_string.dart';
 import '../../../data/models/user_details_model.dart';
-import '../../../res/utils.dart';
+import '../../../core/utils/utils.dart';
 
 class AddUserController extends GetxController {
   String? id;

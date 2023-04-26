@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:offline_database/app/res/string.dart';
+import 'package:offline_database/app/core/values/app_string.dart';
 
 import '../controllers/add_user_controller.dart';
 

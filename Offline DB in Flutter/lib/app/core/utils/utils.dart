@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
-import 'package:offline_database/app/res/colors.dart';
+import 'package:offline_database/app/core/values/app_color.dart';
 
 class Utils{
 
