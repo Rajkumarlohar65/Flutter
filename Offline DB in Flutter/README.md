@@ -1,6 +1,7 @@
 # offline_database using sqflite
+# Platform Support : Android, Ios, MacOs
 
-A new Flutter project.
+A new Flutter project. 
 
 ## Getting Started
 
