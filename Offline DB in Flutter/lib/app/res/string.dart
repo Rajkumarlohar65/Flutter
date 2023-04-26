@@ -21,23 +21,16 @@ class AddUserPageString {
   static const String screenTitle = 'Enter User Data';
 
   static const String idHint = 'id';
-
   static const String alertIdNotNull = 'please enter id';
-
   static const String nameHint = 'name';
   static const String alertNameNotNull = 'please enter name';
-
   static const String emailHint = 'email';
   static const String alertEmailNotNull = 'please enter email';
-
   static const String ageHint = 'age';
   static const String alertAgeNotNull = 'please enter age';
 
   static const String submitButtonText = 'Insert';
-
   static const String submitSuccessMessage = 'Inserted';
-
   static const String submitErrorTitle = 'Error';
   static const String submitErrorMessage = 'Data is not Stored';
 }
-
