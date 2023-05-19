@@ -36,7 +36,7 @@ class AddUserController extends GetxController {
 
       await UserDetailsProvider().postUserDetails(userDetailsData);
     }catch(e){
-      Get.snackbar("Error", "Please enter correct Format");
+      print(e);
     }
 
   }

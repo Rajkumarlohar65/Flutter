@@ -39,6 +39,10 @@ class AddUserView extends GetView<AddUserController> {
                     if (value == null || value.isEmpty) {
                       return 'please enter id';
                     }
+                    if (int.tryParse(value) == null) {
+                      return 'Please enter a valid number';
+                    }
+                    return null;
                   },
                   onSaved: (value) {
                     controller.id = value;
@@ -87,6 +91,10 @@ class AddUserView extends GetView<AddUserController> {
                     if (value == null || value.isEmpty) {
                       return 'please enter age';
                     }
+                    if (int.tryParse(value) == null) {
+                      return 'Please enter a valid number';
+                    }
+                    return null;
                   },
                   onSaved: (value) {
                     controller.age = value;
